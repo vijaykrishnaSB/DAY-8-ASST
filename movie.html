@@ -1,0 +1,62 @@
+QUESTION:
+https://github.com/rvsp/typescript-oops/blob/master/Practice/Movie.md
+
+ANSWER:
+
+class movie {
+    constructor(title,studio,rating) {
+
+        this.title = title;
+        this.studio =studio;
+        this.rating = rating||"PG"
+        console.log("iam parent class constructor")
+
+    }
+
+    getPG (movies){
+        let pgrated = [];
+        for (let i=0; i<movies.length; i++) {
+            if (movies[i].rating ===" " ) {
+            movies[i].rating = this.rating;
+        }
+            if(movies[i].rating === "PG"){
+                pgrated.push(movies[i].name);
+            }   
+    }
+
+    return console.log(pgrated);
+    }
+
+}
+class DLTillu extends movie {
+    constructor(title,studio,rating) {
+        super(title,studio,rating);
+}
+
+}
+let movieobj = new movie();
+       name:"RRR",
+       studio: "DVV Entertainment"
+       rating :"PG"
+   },
+   {
+       name:"KGF-2",
+       studio: "Hombale films"
+       rating:"PG"
+   },
+   {
+       name:"PUSHPA",
+       studio: "Mythri movies makers"
+       rating : "PG"
+   },
+   {
+      name: "DJTillu",
+      studio:"Sithara entertainments"
+      rating: "PG "
+
+   },
+  ]))
+let DJTilluobj = new DJTillu ( "DJTillu","Sithara Entertainments","PG");
+console.log(`title:${DJTillueobj.title}`)
+
+

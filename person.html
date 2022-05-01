@@ -1,0 +1,37 @@
+QUESTION:
+3)Write a “person” class to hold all the details ?
+
+ANSWER:
+class person {
+    constructor(firstname,lastname,age,city,company,designation,salary,experience) {
+    this.firstname=firstname;
+    this.lastname = lastname;
+    this.age = age;
+    this.city = city;
+    this.company=company;
+    this.designation=designation;
+    this.salary = salary;
+    this.experience =experience;
+    }
+}
+class employee extends person {
+    constructor (firstname,lastname,age,city,company,designation,salary,experience) {
+        super(firstname,lastname,age,city,company,designation,salary,experience);
+    }
+    getData() {
+        let employeedata =  `
+        Name:${this.firstname} ${this.lastname}
+        Age:${this.age}
+        City:${this.city}
+        Company: ${this.company}
+        Designation:${this.designation}
+        Salary:${this.salary}
+        Experience:${this.experience}
+        `
+        console.log(employeedata)
+    }
+}
+let employer = new employee ("Ajay","Sai",26,"Hyderbad","Birla","Teamlead","850000",3.5);
+employer.getData();
+let employer1 = new employee ("pradeep","kumar",25,"Hyderbad","Bluestar","Senior Excutive","5,00,000",4);
+employer1.getData();
